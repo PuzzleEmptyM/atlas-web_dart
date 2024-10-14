@@ -1,7 +1,7 @@
 import '5-json_to_user.dart';
 
 void main() {
-  final djo = User(id: 1, name: "Djo", age: 25, height: 1.89);
+  final djo = User(id : 1 ,name: Djo,  age: 25, height: 1.89);
   print(djo.toJson());
 
   Map<String, dynamic> map = {'id': 3, 'name': 'Youssef', 'age': 26, 'height': 1.9};
