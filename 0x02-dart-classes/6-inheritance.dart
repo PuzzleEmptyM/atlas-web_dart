@@ -5,15 +5,23 @@ class User extends Password {
   String name;
   int age;
   double height;
-  String user_password;
+  String _userPassword;
 
   User({
     required this.id,
     required this.name,
     required this.age,
     required this.height,
-    required this.user_password,
-  }) : super(password: user_password);
+    required String user_password,
+  })  : _userPassword = user_password,
+        super(password: user_password);
+
+  String get user_password => _userPassword;
+
+  set user_password(String newPassword) {
+    _userPassword = newPassword;
+    password = newPassword;
+  }
 
   Map<String, dynamic> toJson() {
     return {
