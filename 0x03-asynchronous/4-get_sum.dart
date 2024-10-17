@@ -18,11 +18,8 @@ Future<double> calculateTotal() async {
 
       totalPrice += (productPrice is int) ? productPrice.toDouble() : productPrice;
     }
-
-    print('Total Price: $totalPrice');
     return totalPrice;
   } catch (error) {
-    print('Error caught: $error');
     return -1;
   }
 }
