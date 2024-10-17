@@ -21,6 +21,6 @@ Future<double> calculateTotal() async {
 
     return (totalPrice % 1 == 0) ? totalPrice.toInt().toDouble() : totalPrice;
   } catch (error) {
-    return -1.0;
+    return -1;
   }
 }
